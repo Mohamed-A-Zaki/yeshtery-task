@@ -1,0 +1,19 @@
+$primary-color: #fff200;
+$secondary-color: #542e90;
+
+.navbar {
+  background-color: $primary-color !important;
+  .shop-now {
+    font-size: 14px;
+  }
+}
+
+.categories {
+  a {
+    transition: 0.3s;
+    &:hover,
+    &.active {
+      color: red !important;
+    }
+  }
+}
