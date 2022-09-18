@@ -1,6 +1,7 @@
 import "./App.scss";
 import Breadcrumb from "./Components/Breadcrumb";
 import Categories from "./Components/Categories";
+import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Searchbar from "./Components/Searchbar";
 
@@ -11,6 +12,7 @@ function App() {
       <Searchbar></Searchbar>
       <Categories></Categories>
       <Breadcrumb></Breadcrumb>
+      <Footer></Footer>
     </div>
   );
 }

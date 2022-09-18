@@ -7,13 +7,33 @@ $secondary-color: #542e90;
     font-size: 14px;
   }
 }
-
 .categories {
   a {
     transition: 0.3s;
     &:hover,
     &.active {
       color: red !important;
+    }
+  }
+}
+.footer {
+  .subscribe {
+    input[type="email"]::placeholder {
+      color: $secondary-color;
+    }
+    button {
+      background-color: $primary-color;
+      &:hover {
+        background-color: $primary-color;
+        color: black;
+      }
+    }
+  }
+  a {
+    transition: 0.3s;
+    &:hover {
+      padding-left: 10px;
+      color: $primary-color !important;
     }
   }
 }
