@@ -4,6 +4,10 @@ import nasnav from "../images/nasnav.svg";
 import crash from "../images/Rectangle 586.png";
 import master from "../images/Group 1438.png";
 import visa from "../images/Group 1437.png";
+import facebook from "../images/facebook.svg";
+import linkedin from "../images/linkedin.svg";
+import instgram from "../images/instgram.svg";
+import twitter from "../images/twitter.svg";
 import {
   FaTelegramPlane,
   FaFacebookSquare,
@@ -99,19 +103,19 @@ class Footer extends Component {
                   <div className="col ps-5">
                     <ul className="list-unstyled">
                       <li className="my-2">
-                        <FaFacebookSquare className="fs-3" />
+                        <img src={facebook} alt="" />
                         <span className="ms-2 fs-5">/ Yeshtery</span>
                       </li>
                       <li className="my-2">
-                        <FaLinkedin className="fs-3" />
+                        <img src={linkedin} alt="" />
                         <span className="ms-2 fs-5">/ Yeshtery</span>
                       </li>
                       <li className="my-2">
-                        <FaInstagram className="fs-3" />
+                        <img src={instgram} alt="" />
                         <span className="ms-2 fs-5">/ Yeshtery</span>
                       </li>
                       <li className="my-2">
-                        <FaTwitterSquare className="fs-3" />
+                        <img src={twitter} alt="" />
                         <span className="ms-2 fs-5">/ Yeshtery</span>
                       </li>
                     </ul>
