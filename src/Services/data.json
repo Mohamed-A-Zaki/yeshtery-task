@@ -20,7 +20,7 @@
     "discription": "Adidas black t-shirt lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "size": ["Small", "Medium", "Large", "X Large", "XX Large"],
     "color": ["images/color_1.png", "images/color_2.png"],
-    "is_in_cart": true,
+    "is_in_cart": false,
     "count": 1
   },
   "similar-products": [

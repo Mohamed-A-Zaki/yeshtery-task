@@ -12,6 +12,7 @@ class Cart extends Component {
         id="cart_offcanvas"
         aria-labelledby="offcanvasExampleLabel"
       >
+        {/* offcanvas-header */}
         <div className="offcanvas-header">
           <h5
             className="offcanvas-title fw-bold fs-3 m-auto"
@@ -26,10 +27,10 @@ class Cart extends Component {
             aria-label="Close"
           ></button>
         </div>
+
+        {/* offcanvas-body */}
         <div className="offcanvas-body">
           <h5 className="fw-bold mb-4">Cart Summary</h5>
-
-          {/* products */}
 
           <div className="products">
             {/* start product */}

@@ -42,7 +42,7 @@ class Searchbar extends Component {
                   >
                     <div className="position-relative d-inline-block">
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        10
+                        {this.props.data["main-product"].is_in_cart ? 1 : 0}
                       </span>
                       <AiOutlineShoppingCart className="fs-4" />
                     </div>

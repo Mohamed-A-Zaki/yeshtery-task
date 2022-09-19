@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import "./App.scss";
 import Breadcrumb from "./Components/Breadcrumb";
 import Cart from "./Components/Cart";
@@ -10,19 +11,37 @@ import SimilarProducts from "./Components/SimilarProducts";
 
 import data from "./Services/data.json";
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar></Navbar>
-      <Searchbar></Searchbar>
-      <Categories></Categories>
-      <Breadcrumb></Breadcrumb>
-      <MainProduct data={data}></MainProduct>
-      <SimilarProducts data={data}></SimilarProducts>
-      <Footer></Footer>
-      <Cart data={data}></Cart>
-    </div>
-  );
+class App extends Component {
+  state = {
+    data: data,
+  };
+
+  handle_add_to_cart = () => {
+    const data = JSON.parse(JSON.stringify(this.state.data));
+    console.log(data);
+    data["main-product"].is_in_cart = true;
+    this.setState({
+      data: data,
+    });
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <Navbar></Navbar>
+        <Searchbar data={this.state.data}></Searchbar>
+        <Categories></Categories>
+        <Breadcrumb></Breadcrumb>
+        <MainProduct
+          data={this.state.data}
+          handle_add_to_cart={this.handle_add_to_cart}
+        ></MainProduct>
+        <SimilarProducts data={this.state.data}></SimilarProducts>
+        <Footer></Footer>
+        <Cart data={this.state.data}></Cart>
+      </div>
+    );
+  }
 }
 
 export default App;

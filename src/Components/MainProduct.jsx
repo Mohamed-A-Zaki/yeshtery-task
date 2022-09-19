@@ -134,7 +134,10 @@ class MainProduct extends Component {
                 <hr />
 
                 <div className="buttons d-flex gap-5">
-                  <button className="btn text-white fw-semibold rounded-pill flex-grow-1 py-2">
+                  <button
+                    onClick={this.props.handle_add_to_cart}
+                    className="btn text-white fw-semibold rounded-pill flex-grow-1 py-2"
+                  >
                     Add To Cart
                   </button>
                   <button className="btn text-black fw-semibold rounded-pill flex-grow-1 py-2">
