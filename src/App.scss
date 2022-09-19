@@ -30,6 +30,21 @@ $secondary-color: #542e90;
   }
 }
 
+.buttons {
+  button:first-of-type {
+    background-color: $secondary-color;
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+  button:last-of-type {
+    background-color: $primary-color;
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+
 // start sections
 .navbar {
   background-color: $primary-color !important;
@@ -95,18 +110,18 @@ $secondary-color: #542e90;
       }
     }
   }
-  .buttons {
-    button:first-of-type {
-      background-color: $secondary-color;
-      &:hover {
-        background-color: $secondary-color;
-      }
-    }
-    button:last-of-type {
-      background-color: $primary-color;
-      &:hover {
-        background-color: $primary-color;
-      }
+}
+
+.offcanvas {
+  width: 550px !important;
+  max-width: 100%;
+  .offcanvas-title {
+    color: $secondary-color;
+  }
+  .remove {
+    background-color: $primary-color;
+    &:hover {
+      background-color: $primary-color !important;
     }
   }
 }
@@ -136,8 +151,5 @@ $secondary-color: #542e90;
       width: 30px;
       height: 30px;
     }
-  }
-  p {
-    // font-size: 14px;
   }
 }

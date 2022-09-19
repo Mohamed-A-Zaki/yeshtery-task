@@ -33,7 +33,13 @@ class Searchbar extends Component {
             <div className="col">
               <ul className="list-inline m-0">
                 <li className="list-inline-item fw-bold me-4">
-                  <Link to="/cart" className="text-decoration-none link-dark">
+                  <Link
+                    to="#cart_offcanvas"
+                    className="text-decoration-none link-dark"
+                    data-bs-toggle="offcanvas"
+                    role="button"
+                    aria-controls="offcanvasExample"
+                  >
                     <div className="position-relative d-inline-block">
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         10

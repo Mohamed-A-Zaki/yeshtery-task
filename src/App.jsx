@@ -1,5 +1,6 @@
 import "./App.scss";
 import Breadcrumb from "./Components/Breadcrumb";
+import Cart from "./Components/Cart";
 import Categories from "./Components/Categories";
 import Footer from "./Components/Footer";
 import MainProduct from "./Components/MainProduct";
@@ -19,6 +20,7 @@ function App() {
       <MainProduct data={data}></MainProduct>
       <SimilarProducts data={data}></SimilarProducts>
       <Footer></Footer>
+      <Cart data={data}></Cart>
     </div>
   );
 }
