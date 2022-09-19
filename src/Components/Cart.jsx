@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Cart extends Component {
   render() {
-    const data = this.props.data["main-product"];
+    const data = this.props.data[4];
 
     return (
       <div

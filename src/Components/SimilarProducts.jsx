@@ -10,7 +10,7 @@ class SimilarProducts extends Component {
           <p className="text-muted">You may like these products also</p>
 
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
-            {this.props.data["similar-products"].map((product) => {
+            {this.props.data.slice(0, this.props.data.length - 1).map((product) => {
               return (
                 <div className="col" key={product.id}>
                   <Product {...product}></Product>

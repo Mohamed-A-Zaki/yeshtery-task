@@ -16,13 +16,11 @@ class App extends Component {
     data: data,
   };
 
-  handle_add_to_cart = () => {
+  handle_add_to_cart = (id) => {
     const data = JSON.parse(JSON.stringify(this.state.data));
-    console.log(data);
-    data["main-product"].is_in_cart = true;
-    this.setState({
-      data: data,
-    });
+    let product = data.find((product) => product.id === id);
+    product.is_in_cart = true;
+    this.setState({ data });
   };
 
   render() {
@@ -32,10 +30,12 @@ class App extends Component {
         <Searchbar data={this.state.data}></Searchbar>
         <Categories></Categories>
         <Breadcrumb></Breadcrumb>
+
         <MainProduct
           data={this.state.data}
           handle_add_to_cart={this.handle_add_to_cart}
         ></MainProduct>
+
         <SimilarProducts data={this.state.data}></SimilarProducts>
         <Footer></Footer>
         <Cart data={this.state.data}></Cart>

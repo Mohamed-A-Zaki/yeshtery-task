@@ -5,6 +5,7 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 class MainProduct extends Component {
   render() {
     const {
+      id,
       img,
       images,
       discription,
@@ -16,7 +17,7 @@ class MainProduct extends Component {
       discount,
       size,
       color,
-    } = this.props.data["main-product"];
+    } = this.props.data[4];
 
     return (
       <div className="main-product pt-5">
@@ -135,7 +136,7 @@ class MainProduct extends Component {
 
                 <div className="buttons d-flex gap-5">
                   <button
-                    onClick={this.props.handle_add_to_cart}
+                    onClick={() => this.props.handle_add_to_cart(id)}
                     className="btn text-white fw-semibold rounded-pill flex-grow-1 py-2"
                   >
                     Add To Cart
