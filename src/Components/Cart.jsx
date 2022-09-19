@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 
 class Cart extends Component {
+  // state = { total: 0 };
+
+  // componentDidMount() {
+
+  // }
+
   render() {
     const data = this.props.data.filter((p) => {
       return p.is_in_cart;
@@ -10,34 +16,44 @@ class Cart extends Component {
       <div className="alert alert-info fw-bold text-center">Empty Cart</div>
     );
 
-    const product_list = data.map(({ img, discription, count, new_price }) => {
-      return (
-        <div className="card mb-3 p-2">
-          <div className="row g-0">
-            <div className="col-md-4">
-              <img src={img} className="img-fluid" alt="..." />
-            </div>
-            <div className="col-md-8">
-              <div className="card-body py-0">
-                <p className="fw-bold m-0">{discription}</p>
+    const product_list = data.map(
+      ({ img, discription, count, new_price, id }) => {
+        return (
+          <div className="card mb-3 p-2" key={id}>
+            <div className="row g-0">
+              <div className="col-md-4">
+                <img src={img} className="img-fluid" alt="..." />
+              </div>
+              <div className="col-md-8">
+                <div className="card-body py-0">
+                  <p className="fw-bold m-0">{discription}</p>
 
-                <div className="quantity my-2">Quantitiy : {count}</div>
+                  <div className="quantity my-2">Quantitiy : {count}</div>
 
-                <div className="d-flex flex-wrap align-items-center justify-content-between">
-                  <div className="new_price fw-bold">
-                    <span className="fs-4 me-1">{count * new_price}</span>
-                    LE
+                  <div className="d-flex flex-wrap align-items-center justify-content-between">
+                    <div className="new_price fw-bold">
+                      <span className="fs-4 me-1">{count * new_price}</span>
+                      LE
+                    </div>
+
+                    <button
+                      className="remove btn rounded-pill px-5 fw-semibold"
+                      onClick={() => this.props.handle_remove_from_cart(id)}
+                    >
+                      Remove
+                    </button>
                   </div>
-
-                  <button className="remove btn rounded-pill px-5 fw-semibold">
-                    Remove
-                  </button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      );
+        );
+      }
+    );
+
+    let total_price = 0;
+    data.forEach((product) => {
+      total_price += product.count * product.new_price;
     });
 
     return (
@@ -74,8 +90,7 @@ class Cart extends Component {
             {/* end product */}
 
             <div className="total text-center fw-bold fs-3">
-              Total: {data["is_in_cart"] ? `${data.count * data.new_price}` : 0}{" "}
-              LE
+              Total: {total_price} LE
             </div>
 
             <div className="buttons d-flex gap-4 flex-wrap my-3">

@@ -37,8 +37,8 @@
     "discription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "size": ["Small", "Medium", "Large", "X Large", "XX Large"],
     "color": ["images/color_1.png", "images/color_2.png"],
-    "is_in_cart": false,
-    "count": 1
+    "is_in_cart": true,
+    "count": 2
   },
   {
     "id": 3,
@@ -78,7 +78,7 @@
     "discription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "size": ["Small", "Medium", "Large", "X Large", "XX Large"],
     "color": ["images/color_1.png", "images/color_2.png"],
-    "is_in_cart": false,
+    "is_in_cart": true,
     "count": 1
   },
   {
@@ -103,6 +103,6 @@
     "size": ["Small", "Medium", "Large", "X Large", "XX Large"],
     "color": ["images/color_1.png", "images/color_2.png"],
     "is_in_cart": false,
-    "count": 1
+    "count": 2
   }
 ]
