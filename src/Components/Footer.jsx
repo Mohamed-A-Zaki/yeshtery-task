@@ -8,13 +8,9 @@ import facebook from "../images/facebook.svg";
 import linkedin from "../images/linkedin.svg";
 import instgram from "../images/instgram.svg";
 import twitter from "../images/twitter.svg";
-import {
-  FaTelegramPlane,
-  FaFacebookSquare,
-  FaLinkedin,
-  FaInstagram,
-  FaTwitterSquare,
-} from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
+
+import { Link } from "react-router-dom";
 
 class Footer extends Component {
   render() {
@@ -25,7 +21,7 @@ class Footer extends Component {
             <div className="col border-end">
               <div className="box">
                 <img src={logo} alt="logo" />
-                <p className="my-3">
+                <p className="my-3 text-white-50">
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                   diam nonummy nibh euismod tincidunt ut laoreet dolore magna
                   aliquam erat volutpat.
@@ -64,39 +60,60 @@ class Footer extends Component {
                   <div className="col border-end">
                     <ul className="list-unstyled">
                       <li className="my-2">
-                        <a href="#" className="text-decoration-none link-light">
+                        <Link
+                          to="/about"
+                          className="text-decoration-none link-light"
+                        >
                           About Us
-                        </a>
+                        </Link>
                       </li>
                       <li className="my-2">
-                        <a href="#" className="text-decoration-none link-light">
+                        <Link
+                          to="/contact"
+                          className="text-decoration-none link-light"
+                        >
                           Contact Us
-                        </a>
+                        </Link>
                       </li>
                       <li className="my-2">
-                        <a href="#" className="text-decoration-none link-light">
+                        <Link
+                          to="/order"
+                          className="text-decoration-none link-light"
+                        >
                           Take Order
-                        </a>
+                        </Link>
                       </li>
                       <li className="my-2">
-                        <a href="#" className="text-decoration-none link-light">
+                        <Link
+                          to="/terms"
+                          className="text-decoration-none link-light"
+                        >
                           Tearm & Conditions
-                        </a>
+                        </Link>
                       </li>
                       <li className="my-2">
-                        <a href="#" className="text-decoration-none link-light">
+                        <Link
+                          to="privacy"
+                          className="text-decoration-none link-light"
+                        >
                           Privacy Policy
-                        </a>
+                        </Link>
                       </li>
                       <li className="my-2">
-                        <a href="#" className="text-decoration-none link-light">
+                        <Link
+                          to="/sell"
+                          className="text-decoration-none link-light"
+                        >
                           Sell With Us
-                        </a>
+                        </Link>
                       </li>
                       <li className="my-2">
-                        <a href="#" className="text-decoration-none link-light">
+                        <Link
+                          to="shipping"
+                          className="text-decoration-none link-light"
+                        >
                           Shipping & Returns
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -104,19 +121,19 @@ class Footer extends Component {
                     <ul className="list-unstyled">
                       <li className="my-2">
                         <img src={facebook} alt="" />
-                        <span className="ms-2 fs-5">/ Yeshtery</span>
+                        <span className="ms-2">/ Yeshtery</span>
                       </li>
                       <li className="my-2">
                         <img src={linkedin} alt="" />
-                        <span className="ms-2 fs-5">/ Yeshtery</span>
+                        <span className="ms-2">/ Yeshtery</span>
                       </li>
                       <li className="my-2">
                         <img src={instgram} alt="" />
-                        <span className="ms-2 fs-5">/ Yeshtery</span>
+                        <span className="ms-2">/ Yeshtery</span>
                       </li>
                       <li className="my-2">
                         <img src={twitter} alt="" />
-                        <span className="ms-2 fs-5">/ Yeshtery</span>
+                        <span className="ms-2">/ Yeshtery</span>
                       </li>
                     </ul>
                   </div>

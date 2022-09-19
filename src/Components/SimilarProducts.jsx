@@ -8,7 +8,7 @@ class SimilarProducts extends Component {
         <div className="container">
           <h3>Similar Products</h3>
           <p className="text-muted">You may like these products also</p>
-          
+
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
             {this.props.data["similar-products"].map((product) => {
               return (
@@ -18,6 +18,8 @@ class SimilarProducts extends Component {
               );
             })}
           </div>
+
+          <div className="line my-5 position-relative"></div>
         </div>
       </div>
     );

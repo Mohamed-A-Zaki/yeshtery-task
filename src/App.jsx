@@ -2,6 +2,7 @@ import "./App.scss";
 import Breadcrumb from "./Components/Breadcrumb";
 import Categories from "./Components/Categories";
 import Footer from "./Components/Footer";
+import MainProduct from "./Components/MainProduct";
 import Navbar from "./Components/Navbar";
 import Searchbar from "./Components/Searchbar";
 import SimilarProducts from "./Components/SimilarProducts";
@@ -15,6 +16,7 @@ function App() {
       <Searchbar></Searchbar>
       <Categories></Categories>
       <Breadcrumb></Breadcrumb>
+      <MainProduct data={data}></MainProduct>
       <SimilarProducts data={data}></SimilarProducts>
       <Footer></Footer>
     </div>

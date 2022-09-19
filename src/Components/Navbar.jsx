@@ -6,6 +6,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoLocationOutline } from "react-icons/io5";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 class Navbar extends Component {
   render() {
@@ -14,10 +15,10 @@ class Navbar extends Component {
         <div className="container">
           <div className="row align-items-center w-100 text-center justify-content-between">
             <div className="col-md-2">
-              <a className="navbar-brand" href="#">
+              <Link className="navbar-brand" to="/">
                 <TbAlignLeft className="fs-2 text-black me-2" />
                 <img src={logo} alt="logo" />
-              </a>
+              </Link>
             </div>
 
             <div className="col-md-8 col-xl-6">
@@ -27,9 +28,9 @@ class Navbar extends Component {
                   <span>
                     Valentine’s Day Offers! Buy Two Get One Free Shop Now
                   </span>
-                  <a href="#" className="ms-2 link-dark fw-bold">
+                  <Link to="/shop-now" className="ms-2 link-dark fw-bold">
                     Shop now
-                  </a>
+                  </Link>
                 </span>
                 <IoIosArrowForward />
               </div>
@@ -38,26 +39,26 @@ class Navbar extends Component {
             <div className="col-xl-4">
               <ul className="navbar-nav mb-2 mb-lg-0 flex-row gap-4 justify-content-md-center">
                 <li className="nav-item">
-                  <a
+                  <Link
                     className="nav-link text-black"
                     aria-current="page"
-                    href="#"
+                    to="/contact"
                   >
                     <FiPhoneCall className="me-2" />
                     <span className="fw-semibold">Contact Us</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-black" href="#">
+                  <Link className="nav-link text-black" to="/track-order">
                     <AiOutlineShoppingCart className="me-2" />
                     <span className="fw-semibold">Track Order</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-black" href="#">
+                  <Link className="nav-link text-black" to="/find-store">
                     <IoLocationOutline className="me-2" />
                     <span className="fw-semibold">Find A Store</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

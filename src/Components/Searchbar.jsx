@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import search from "../images/search.svg";
+import { Link } from "react-router-dom";
 
 import {
   AiOutlineShoppingCart,
@@ -32,7 +33,7 @@ class Searchbar extends Component {
             <div className="col">
               <ul className="list-inline m-0">
                 <li className="list-inline-item fw-bold me-4">
-                  <a href="#" className="text-decoration-none link-dark">
+                  <Link to="/cart" className="text-decoration-none link-dark">
                     <div className="position-relative d-inline-block">
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         10
@@ -40,21 +41,24 @@ class Searchbar extends Component {
                       <AiOutlineShoppingCart className="fs-4" />
                     </div>
                     <span className="ms-3">Cart</span>
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="list-inline-item fw-bold me-4">
-                  <a href="#" className="text-decoration-none link-dark">
+                  <Link
+                    to="/wishlist"
+                    className="text-decoration-none link-dark"
+                  >
                     <AiOutlineHeart className="fs-4" />
                     <span className="ms-2">Wishlist</span>
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="list-inline-item fw-bold">
-                  <a href="#" className="text-decoration-none link-dark">
+                  <Link to="/login" className="text-decoration-none link-dark">
                     <AiOutlineUser className="fs-4" />
                     <span className="ms-2">Login</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

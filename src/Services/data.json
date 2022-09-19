@@ -1,4 +1,26 @@
 {
+  "main-product": {
+    "id": 5,
+    "img": "images/img_2@2x.png",
+    "images": [
+      "images/main_1.png",
+      "images/main_2.png",
+      "images/main_3.png",
+      "images/main_4.png"
+    ],
+    "new_price": 1000,
+    "old_price": 1000,
+    "discount": 30,
+    "rate": 4.2,
+    "rate_count": 22,
+    "gender": "Men",
+    "from": "Egypt",
+    "to": "Egypt",
+    "duration": 2,
+    "discription": "Adidas black t-shirt lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    "size": ["Small", "Medium", "Large", "X Large", "XX Large"],
+    "color": ["images/color_1.png", "images/color_2.png"]
+  },
   "similar-products": [
     {
       "id": 1,
@@ -18,7 +40,7 @@
       "new_price": 1000,
       "old_price": 1000,
       "rate": 4.2,
-      "picupfrom" : "Genena Mail",
+      "picupfrom": "Genena Mail",
       "discription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
     },
     {
@@ -39,7 +61,7 @@
       "new_price": 1000,
       "old_price": 1000,
       "rate": 4.2,
-      "picupfrom" : "Genena Mail",
+      "picupfrom": "Genena Mail",
       "discription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
     }
   ]

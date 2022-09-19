@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Breadcrumb extends Component {
   render() {
@@ -7,18 +8,21 @@ class Breadcrumb extends Component {
         <div className="container">
           <ol className="breadcrumb mb-0">
             <li className="breadcrumb-item">
-              <a href="#">Men</a>
+              <Link to="/men">Men</Link>
             </li>
             <li className="breadcrumb-item">
-              <a href="#">Clothing</a>
+              <Link to="/clothing">Clothing</Link>
             </li>
             <li className="breadcrumb-item">
-              <a href="#">Tops</a>
+              <Link to="/tops">Tops</Link>
             </li>
             <li className="breadcrumb-item">
-              <a href="#">Adidas</a>
+              <Link to="/adidas">Adidas</Link>
             </li>
-            <li className="breadcrumb-item active text-black" aria-current="page">
+            <li
+              className="breadcrumb-item active text-black"
+              aria-current="page"
+            >
               Adidas black t-shirt
             </li>
           </ol>

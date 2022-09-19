@@ -30,8 +30,8 @@ class Product extends Component {
 
           <div className="d-flex justify-content-between align-items-center my-3">
             <div className="price">
-              <div className="new_price">
-                <span className="fw-bold fs-4">{new_price}</span>
+              <div className="new_price fw-bold">
+                <span className="fs-4 me-1">{new_price}</span>
                 LE
               </div>
               {discount && (

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class Categories extends Component {
   render() {
@@ -7,39 +8,45 @@ class Categories extends Component {
         <div className="container py-3">
           <div className="row row-cols-2 row-cols-md-4">
             <div className="col-lg">
-              <a href="#" className="active text-decoration-none link-light">
+              <NavLink to="/men" className="text-decoration-none link-light">
                 Men
-              </a>
+              </NavLink>
             </div>
             <div className="col-lg">
-              <a href="#" className="text-decoration-none link-light">
+              <NavLink to="/women" className="text-decoration-none link-light">
                 Women
-              </a>
+              </NavLink>
             </div>
             <div className="col-lg">
-              <a href="#" className="text-decoration-none link-light">
+              <NavLink to="/unisex" className="text-decoration-none link-light">
                 Unisex
-              </a>
+              </NavLink>
             </div>
             <div className="col-lg">
-              <a href="#" className="text-decoration-none link-light">
+              <NavLink to="/kids" className="text-decoration-none link-light">
                 Kids
-              </a>
+              </NavLink>
             </div>
             <div className="col-lg">
-              <a href="#" className="text-decoration-none link-light">
+              <NavLink
+                to="/best-sellers"
+                className="text-decoration-none link-light"
+              >
                 Best Sellers
-              </a>
+              </NavLink>
             </div>
             <div className="col-lg">
-              <a href="#" className="text-decoration-none link-light">
+              <NavLink
+                to="/new-arival"
+                className="text-decoration-none link-light"
+              >
                 New Arival
-              </a>
+              </NavLink>
             </div>
             <div className="col-lg">
-              <a href="#" className="text-decoration-none link-light">
+              <NavLink to="/offers" className="text-decoration-none link-light">
                 Offers
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
