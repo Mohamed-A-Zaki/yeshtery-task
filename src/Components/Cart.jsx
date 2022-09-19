@@ -2,7 +2,43 @@ import React, { Component } from "react";
 
 class Cart extends Component {
   render() {
-    const data = this.props.data[4];
+    const data = this.props.data.filter((p) => {
+      return p.is_in_cart;
+    });
+
+    const empty_cart = (
+      <div className="alert alert-info fw-bold text-center">Empty Cart</div>
+    );
+
+    const product_list = data.map(({ img, discription, count, new_price }) => {
+      return (
+        <div className="card mb-3 p-2">
+          <div className="row g-0">
+            <div className="col-md-4">
+              <img src={img} className="img-fluid" alt="..." />
+            </div>
+            <div className="col-md-8">
+              <div className="card-body py-0">
+                <p className="fw-bold m-0">{discription}</p>
+
+                <div className="quantity my-2">Quantitiy : {count}</div>
+
+                <div className="d-flex flex-wrap align-items-center justify-content-between">
+                  <div className="new_price fw-bold">
+                    <span className="fs-4 me-1">{count * new_price}</span>
+                    LE
+                  </div>
+
+                  <button className="remove btn rounded-pill px-5 fw-semibold">
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    });
 
     return (
       <div
@@ -34,41 +70,7 @@ class Cart extends Component {
 
           <div className="products">
             {/* start product */}
-            {data["is_in_cart"] ? (
-              <div className="card mb-3 p-2">
-                <div className="row g-0">
-                  <div className="col-md-4">
-                    <img src={data.img} className="img-fluid" alt="..." />
-                  </div>
-                  <div className="col-md-8">
-                    <div className="card-body py-0">
-                      <p className="fw-bold m-0">{data.discription}</p>
-
-                      <div className="quantity my-2">
-                        Quantitiy : {data.count}
-                      </div>
-
-                      <div className="d-flex flex-wrap align-items-center justify-content-between">
-                        <div className="new_price fw-bold">
-                          <span className="fs-4 me-1">
-                            {data.count * data.new_price}
-                          </span>
-                          LE
-                        </div>
-
-                        <button className="remove btn rounded-pill px-5 fw-semibold">
-                          Remove
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div className="alert alert-info fw-bold text-center">
-                Empty Cart
-              </div>
-            )}
+            {data.length === 0 ? empty_cart : product_list}
             {/* end product */}
 
             <div className="total text-center fw-bold fs-3">
