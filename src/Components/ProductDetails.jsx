@@ -17,7 +17,10 @@ class MainProduct extends Component {
       discount,
       size,
       color,
+      count,
     } = this.props.data[4];
+
+    console.log(count);
 
     return (
       <div className="main-product pt-5">
@@ -122,11 +125,17 @@ class MainProduct extends Component {
                   <h5>Quantitiy</h5>
 
                   <button className="bg-light p-2 fw-bold rounded-pill w-50 border position-relative">
-                    1
-                    <span className="position-absolute top-50 start-0 translate-middle-y ms-2 d-flex align-items-center justify-content-center fs-3 fw-bold rounded-circle">
+                    {count}
+                    <span
+                      className="position-absolute top-50 start-0 translate-middle-y ms-2 d-flex align-items-center justify-content-center fs-3 fw-bold rounded-circle"
+                      onClick={() => this.props.handle_decrease_count(id)}
+                    >
                       -
                     </span>
-                    <span className="position-absolute top-50 end-0 translate-middle-y me-2 d-flex align-items-center justify-content-center fs-3 fw-bold rounded-circle">
+                    <span
+                      className="position-absolute top-50 end-0 translate-middle-y me-2 d-flex align-items-center justify-content-center fs-3 fw-bold rounded-circle"
+                      onClick={() => this.props.handle_increase_count(id)}
+                    >
                       +
                     </span>
                   </button>

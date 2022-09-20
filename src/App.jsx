@@ -49,6 +49,20 @@ class App extends Component {
     toast.success("Product deleted successfully!");
   };
 
+  handle_increase_count = (id) => {
+    const data = JSON.parse(JSON.stringify(this.state.data));
+    let product = data.find((product) => product.id === id);
+    product.count++;
+    this.setState({ data });
+  };
+
+  handle_decrease_count = (id) => {
+    const data = JSON.parse(JSON.stringify(this.state.data));
+    let product = data.find((product) => product.id === id);
+    product.count--;
+    this.setState({ data });
+  };
+
   render() {
     return (
       <div className="App">
@@ -61,6 +75,8 @@ class App extends Component {
           <ProductDetails
             data={this.state.data}
             handle_add_to_cart={this.handle_add_to_cart}
+            handle_increase_count={this.handle_increase_count}
+            handle_decrease_count={this.handle_decrease_count}
           ></ProductDetails>
         </React.Suspense>
 
