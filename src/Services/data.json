@@ -103,6 +103,6 @@
     "size": ["Small", "Medium", "Large", "X Large", "XX Large"],
     "color": ["images/color_1.png", "images/color_2.png"],
     "is_in_cart": false,
-    "count": 2
+    "count": 1
   }
 ]

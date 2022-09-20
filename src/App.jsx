@@ -5,14 +5,16 @@ import Breadcrumb from "./Components/Breadcrumb";
 import Cart from "./Components/Cart";
 import Categories from "./Components/Categories";
 import Footer from "./Components/Footer";
-import ProductDetails from "./Components/ProductDetails";
+// import ProductDetails from "./Components/ProductDetails";
 import Navbar from "./Components/Navbar";
 import Searchbar from "./Components/Searchbar";
 import SimilarProducts from "./Components/SimilarProducts";
 
 import { ToastContainer, toast } from "react-toastify";
-
 import data from "./Services/data.json";
+import Loading from "./Components/Loading";
+
+const ProductDetails = React.lazy(() => import("./Components/ProductDetails"));
 
 class App extends Component {
   state = { data: data };
@@ -55,10 +57,12 @@ class App extends Component {
         <Categories></Categories>
         <Breadcrumb></Breadcrumb>
 
-        <ProductDetails
-          data={this.state.data}
-          handle_add_to_cart={this.handle_add_to_cart}
-        ></ProductDetails>
+        <React.Suspense fallback={<Loading></Loading>}>
+          <ProductDetails
+            data={this.state.data}
+            handle_add_to_cart={this.handle_add_to_cart}
+          ></ProductDetails>
+        </React.Suspense>
 
         <SimilarProducts data={this.state.data}></SimilarProducts>
         <Footer></Footer>
