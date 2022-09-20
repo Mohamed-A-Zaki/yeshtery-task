@@ -59,7 +59,9 @@ class App extends Component {
   handle_decrease_count = (id) => {
     const data = JSON.parse(JSON.stringify(this.state.data));
     let product = data.find((product) => product.id === id);
-    product.count--;
+    if (product.count > 1) {
+      product.count--;
+    }
     this.setState({ data });
   };
 
