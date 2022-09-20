@@ -20,8 +20,6 @@ class MainProduct extends Component {
       count,
     } = this.props.data[4];
 
-    console.log(count);
-
     return (
       <div className="main-product pt-5">
         <div className="container">

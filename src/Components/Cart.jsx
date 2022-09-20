@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 
 class Cart extends Component {
-  // state = { total: 0 };
-
-  // componentDidMount() {
-
-  // }
-
   render() {
     const data = this.props.data.filter((p) => {
       return p.is_in_cart;
