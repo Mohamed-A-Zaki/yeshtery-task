@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import search from "../images/search.svg";
+import rotate from "../images/360.svg";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 class MainProduct extends Component {
@@ -27,6 +28,9 @@ class MainProduct extends Component {
             <div className="col-lg-4">
               <div className="box">
                 <div className="image">
+                  <div className="position-absolute p-2 m-2 rounded-3 bg-light">
+                    <img src={rotate} alt="360" className="rotate" />
+                  </div>
                   <img src={img} alt="img" className="img-fluid w-100" />
                 </div>
                 <div className="gallary d-flex align-items-center justify-content-between gap-2 mt-3">

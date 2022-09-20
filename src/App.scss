@@ -29,6 +29,10 @@ $secondary-color: #542e90;
     background-color: #e09b00 !important;
   }
 }
+img.rotate {
+  width: 30px;
+  cursor: pointer;
+}
 
 .buttons {
   button:first-of-type {
@@ -66,10 +70,6 @@ $secondary-color: #542e90;
 .similar-products {
   h3 {
     color: $secondary-color;
-  }
-  img.rotate {
-    width: 30px;
-    cursor: pointer;
   }
   .line {
     height: 2px;
