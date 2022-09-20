@@ -45,6 +45,7 @@ class App extends Component {
     const data = JSON.parse(JSON.stringify(this.state.data));
     let product = data.find((product) => product.id === id);
     product.is_in_cart = false;
+    product.count = 1;
     this.setState({ data });
     toast.success("Product deleted successfully!");
   };
